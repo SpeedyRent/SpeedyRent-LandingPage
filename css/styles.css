@@ -1,0 +1,778 @@
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+h2, h3 {
+    color: #2C3E50;
+}
+
+/* Barra de navegación */
+header {
+    background-color: #2C3E50;
+    border-bottom: 1px solid #ffffff;
+    position: relative; /* Asegura que el menú hamburguesa se posicione correctamente */
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.nav-links li a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #2ECC71;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.auth-buttons .btn {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-buttons .btn.login {
+    color: #333;
+}
+
+.auth-buttons .btn.register {
+    background-color: #2ECC71;
+    color: white;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* Ocultar las opciones del menú y el menú hamburguesa en pantallas grandes */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    font-size: 2rem;
+    color: white; /* Color blanco para el ícono */
+}
+
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 1300px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: left;
+    padding-left: 50px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.308);
+}
+
+.hero-content {
+    position: relative;
+    padding: 150px;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.btn-primary {
+    background-color: #2ECC71;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #27ae60;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #fff;
+    padding: 150px 200px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.step {
+    flex-basis: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Asegura que todo esté centrado */
+    justify-content: center; /* Alinea verticalmente el contenido */
+}
+
+.step img {
+    max-width: 80px; /* Ajusta el tamaño de las imágenes para que sean uniformes */
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #2ECC71; /* Fondo verde para toda la sección */
+    padding: 220px;
+    text-align: center;
+    color: white;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex-basis: 30%;
+    max-width: 350px;
+    text-align: left;
+}
+
+.testimonial-card .stars {
+    font-size: 1.2rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info .name {
+    font-weight: bold;
+    color: #333;
+}
+
+.user-info .role {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Safety Measures Section */
+.safety {
+    background-color: #ffffff; /* Cambia el fondo a blanco */
+    padding: 150px 200px;
+    text-align: center;
+}
+
+.safety h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2C3E50; /* Color del título para mantener consistencia */
+}
+
+.safety-measures {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.measure {
+    flex-basis: 45%;
+    text-align: center;
+}
+
+.measure img {
+    max-width: 100px; /* Aumenta el tamaño de las imágenes */
+    margin-bottom: 20px;
+}
+
+.measure h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2C3E50; /* Color de los subtítulos */
+}
+
+.measure p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Botones Learn More con formato de Contact Us */
+.btn-learn-more {
+    background-color: #2ECC71; /* Fondo verde */
+    color: white;
+    padding: 15px 30px; /* Tamaño del botón ajustado */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 30px; /* Espacio de 30px entre el texto y el botón */
+    border: none;
+    cursor: pointer;
+}
+
+.btn-learn-more:hover {
+    background-color: #27ae60; /* Efecto hover para fondo verde oscuro */
+}
+
+/* Sección Premium con márgenes más grandes, excepto para la imagen */
+.premium-section {
+    background-color: #2C3E50; /* Fondo azul marino */
+    color: white;
+    padding: 150px 200px; /* Aplica un padding general para los textos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.premium-text {
+    max-width: 50%;
+    padding-right: 100px; /* Agrega más espacio a la derecha del texto */
+}
+
+.premium-text h2 {
+    font-size: 2rem; /* Ajusta el tamaño del texto de título */
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.premium-image {
+    position: absolute; /* Posiciona la imagen de forma absoluta */
+    right: 0; /* Pegada completamente al borde derecho */
+    top: 0;
+    bottom: 0;
+    width: 40%; /* Aumenta el tamaño de la imagen al 50% de la sección */
+}
+
+.premium-image img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho del contenedor */
+    height: 100%; /* Hace que la imagen llene completamente el contenedor */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    border-bottom-right-radius: 20px; /* Curvatura en la esquina inferior derecha */
+}
+
+
+
+/* Sección de Contact Us con márgenes más separados */
+.contact-section {
+    background-color: #2C3E50; /* Fondo azul marino */
+    color: white;
+    padding: 150px 200px; /* Aumenta el padding a 100px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.contact-form {
+    max-width: 50%;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #2ECC71;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #E67E22;
+}
+
+.contact-image {
+    max-width: 40%;
+}
+
+.contact-image img {
+    width: 100%;
+    border-radius: 250px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-social a img {
+    width: 200px;
+    margin: 0 10px;
+}
+
+.footer-social a:hover img {
+    opacity: 0.7;
+}
+
+/* Sección Premium Plans */
+.premium-plans {
+    background-color: #E67E22; /* Fondo naranja */
+    color: white;
+    padding: 150px 200px; /* Añadido padding de 100px a los lados */
+    text-align: center;
+}
+
+.premium-plans h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.plan-card {
+    background-color: white;
+    color: #333;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.plan-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.plan-card .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #E67E22;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.plan-card ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.plan-card .btn-subscribe {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plan-card .btn-subscribe:hover {
+    background-color: #555;
+}
+
+.plan-card .cancel-text {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.most-popular {
+    position: relative;
+    border: 2px solid #2ECC71; /* Borde especial para el plan más popular */
+}
+
+.most-popular .popular-badge {
+    background-color: #2ECC71;
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 5px;
+}
+
+
+/* Nueva sección "Why Choose Us?" */
+.why-choose-us {
+    background-color: #fff; /* Fondo blanco */
+    padding: 100px 50px; /* Espaciado general con márgenes */
+    text-align: center; /* Centra los textos */
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2C3E50; /* Color del título */
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-around; /* Espaciado entre los elementos */
+    align-items: center;
+    gap: 20px; /* Espacio entre las razones */
+}
+
+.reason {
+    flex-basis: 30%; /* Cada ítem ocupa el 30% del espacio disponible */
+    text-align: center;
+}
+
+.reason img {
+    max-width: 80px; /* Tamaño de los íconos */
+    margin-bottom: 20px;
+}
+
+.reason h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2C3E50; /* Color del subtítulo */
+}
+
+.reason p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Sección del equipo */
+.team-section {
+    background-color: #ffffff;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2C3E50; /* Color del título */
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px; /* Espaciado entre los miembros */
+}
+
+.member {
+    flex-basis: 20%; /* Cada miembro ocupa un 20% en pantallas grandes */
+    max-width: 200px;
+    text-align: center;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.member h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilos para el menú hamburguesa */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+/* Ocultar el menú inicialmente en pantallas pequeñas */
+.nav-links {
+    display:contents;
+}
+
+/* Mostrar el menú cuando la clase "active" esté presente */
+.nav-links.active {
+    display: flex;
+}
+
+
+/* Cuando la clase "active" está presente, muestra el menú */
+.nav-links.active {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna en pantallas pequeñas */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #2C3E50;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+}
+
+
+/* Mostrar el menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2C3E50;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .auth-buttons {
+        display: none; /* Esconder botones de login/register en pantallas pequeñas */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .steps, .testimonial-cards, .safety-measures {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step, .testimonial-card, .measure {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .premium-plans {
+        padding: 80px 20px; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    .plan-cards {
+        flex-direction: column;
+    }
+
+    .plan-card {
+        flex-basis: 100%;
+    }
+
+    .reasons {
+        flex-direction: column; /* Coloca los ítems uno debajo del otro en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .reason {
+        flex-basis: 100%; /* Cada ítem ocupa el 100% en pantallas pequeñas */
+        margin-bottom: 30px;
+    }
+
+    .team-members {
+        flex-direction: column; /* En pantallas pequeñas, los miembros se apilan verticalmente */
+        align-items: center;
+    }
+
+    .member {
+        flex-basis: 100%; /* Cada miembro ocupa el 100% del ancho en pantallas pequeñas */
+        max-width: 300px;
+    }
+
+    .member img {
+        max-width: 150px;
+        height: 150px;
+    }
+
+}
