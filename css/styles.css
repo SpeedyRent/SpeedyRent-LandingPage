@@ -1,4 +1,4 @@
-/* General reset and box-sizing */
+
 * {
     margin: 0;
     padding: 0;
@@ -29,11 +29,11 @@ h2, h3 {
     color: #2C3E50;
 }
 
-/* Barra de navegación */
+
 header {
     background-color: #2C3E50;
     border-bottom: 1px solid #ffffff;
-    position: relative; /* Asegura que el menú hamburguesa se posicione correctamente */
+    position: relative; 
 }
 
 .navbar {
