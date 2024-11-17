@@ -756,17 +756,17 @@ footer {
     }
 
     .reason {
-        flex-basis: 100%; /* Cada ítem ocupa el 100% en pantallas pequeñas */
+        flex-basis: 100%; 
         margin-bottom: 30px;
     }
 
     .team-members {
-        flex-direction: column; /* En pantallas pequeñas, los miembros se apilan verticalmente */
+        flex-direction: column; 
         align-items: center;
     }
 
     .member {
-        flex-basis: 100%; /* Cada miembro ocupa el 100% del ancho en pantallas pequeñas */
+        flex-basis: 100%; 
         max-width: 300px;
     }
 
